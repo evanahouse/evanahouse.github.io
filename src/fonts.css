@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Primer Print';
+  src: url('./assets/fonts/primerPrint.otf') format('opentype');
+  
+}
+
+@font-face {
+  font-family: 'Primer Print Bold';
+  src: url('./assets/fonts/primerPrintBold.otf') format('opentype');
+}
