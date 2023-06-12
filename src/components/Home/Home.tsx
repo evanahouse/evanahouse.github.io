@@ -25,6 +25,7 @@ const StyledContainer = styled(Container)(({ theme }) => ({
   alignItems: "start",
   justifyContent: "center",
   display: "flex",
+  
 }));
 
 const Home = () => {
@@ -63,7 +64,7 @@ const Home = () => {
 
   return (
     <Wrapper>
-      <StyledContainer maxWidth="xl">
+      <StyledContainer maxWidth="xl" >
         <ProfilePhoto />
         <Container
           sx={{

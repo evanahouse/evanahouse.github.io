@@ -1,7 +1,6 @@
+import { useMediaQuery, useTheme } from "@mui/material";
 import Box from "@mui/material/Box";
-import { useTheme, useMediaQuery } from "@mui/material";
 import logo from "../../../assets/images/evanHouse2.jpeg";
-
 
 const ProfilePhoto = () => {
   const theme = useTheme();
@@ -16,6 +15,7 @@ const ProfilePhoto = () => {
         mt: 1,
         mb: 1,
         maxWidth: isMobile ? 200 : 500, // Adjust the maxWidth based on the screen size
+        alignSelf: isMobile ? "center" : "auto",
       }}
       src={logo}
     />
