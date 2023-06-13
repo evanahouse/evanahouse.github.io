@@ -1,6 +1,7 @@
-import { Button, useMediaQuery, useTheme } from "@mui/material";
+import { Button } from "@mui/material";
 import { styled } from "@mui/system";
 import { PALETTE } from "../../../constants/palette";
+import useIsMobile from "../../../hooks/useIsMobile";
 
 interface StyledButtonProps {
   showButton: boolean;
@@ -24,16 +25,16 @@ const StyledButton = styled(Button)(({ theme }) => ({
   },
 }));
 const MainActionButton = ({ showButton, to, children }: StyledButtonProps) => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const { isMobile } = useIsMobile();
+
   return (
     <StyledButton
       variant="contained"
       sx={{
         opacity: showButton ? 1 : 0,
         typography: isMobile ? "h6" : "h3",
-        mt: 5,
-        mb: 2,
+        mt: isMobile ? 0 : 0,
+        mb: isMobile ? 0 : 0,
       }}
     >
       {children}

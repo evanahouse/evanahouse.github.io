@@ -27,7 +27,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="sticky" sx={{ backgroundColor: PALETTE.bgOne }}>
+    <AppBar position="sticky" sx={{ backgroundColor: PALETTE.bgOne, minHeight: 50 }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* COMPUTER VIEW */}
