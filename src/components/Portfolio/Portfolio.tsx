@@ -1,7 +1,7 @@
 import ScreenWrapper from "../../common/ScreenWrapper";
 
-const Resume = () => {
+const Portfolio = () => {
   return <ScreenWrapper></ScreenWrapper>;
 };
 
-export default Resume;
+export default Portfolio;

@@ -4,15 +4,18 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
+
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import { PALETTE } from "../../constants/palette";
+import getPageURL from "../../features/getPageURL";
 
-const pages = ["ABOUT", "PROJECTS", "RESUME", "CONTACT"];
+const pages = ["ABOUT", "PORTFOLIO", "RESUME", "CONTACT"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -26,8 +29,13 @@ function ResponsiveAppBar() {
     setAnchorElNav(null);
   };
 
+  const navigate = useNavigate();
+
   return (
-    <AppBar position="sticky" sx={{ backgroundColor: PALETTE.bgOne, minHeight: 50 }}>
+    <AppBar
+      position="sticky"
+      sx={{ backgroundColor: PALETTE.bgOne, minHeight: 50 }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* COMPUTER VIEW */}
@@ -58,7 +66,10 @@ function ResponsiveAppBar() {
               <Button
                 key={page}
                 size="large"
-                onClick={handleCloseNavMenu}
+                onClick={() => {
+                  handleCloseNavMenu();
+                  navigate(getPageURL(page));
+                }}
                 sx={{
                   my: 2,
                   color: "white",
@@ -69,7 +80,6 @@ function ResponsiveAppBar() {
                     color: PALETTE.bgTwo,
                   },
                 }}
-                //change hover text color
               >
                 {page}
               </Button>

@@ -13,6 +13,7 @@ const Home = () => {
   const [showButton, setShowButton] = useState(false);
   const { isMobile } = useIsMobile();
 
+
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
@@ -42,16 +43,16 @@ const Home = () => {
   },[]);
 
   return (
-    <ScreenWrapper sx={{
-      justifyContent: isMobile ? "center" : "center",
-    }}>
+    <ScreenWrapper
+      sx={{
+        justifyContent: isMobile ? "center" : "center",
+      }}
+    >
       <HomeContainer
         maxWidth="xl"
         sx={{
           flexDirection: isMobile ? "column" : "row",
           pt: isMobile ? 5 : 10,
-         
-
         }}
       >
         <ProfilePhoto />
@@ -61,16 +62,19 @@ const Home = () => {
             flexDirection: "column",
             ml: isMobile ? 0 : 5,
             width: isMobile ? "100%" : "100%",
-
           }}
         >
-          <Typography ref={el} variant={isMobile ? "h6" : "h2"} align="left" sx={{
-            pb: isMobile ? 2 : 5,
-            alignSelf: "center",
-            width: isMobile ? "75%" : "100%",
-        }}
-            />
-          <MainActionButton showButton={showButton}>
+          <Typography
+            ref={el}
+            variant={isMobile ? "h6" : "h2"}
+            align="left"
+            sx={{
+              pb: isMobile ? 2 : 5,
+              alignSelf: "center",
+              width: isMobile ? "75%" : "100%",
+            }}
+          />
+          <MainActionButton to={"/portfolio"} showButton={showButton}>
             View Portfolio
           </MainActionButton>
           <Typography
@@ -80,7 +84,7 @@ const Home = () => {
           >
             or
           </Typography>
-          <MainActionButton showButton={showButton}>
+          <MainActionButton to={"/resume"} showButton={showButton}>
             Download Resume
           </MainActionButton>
         </Container>

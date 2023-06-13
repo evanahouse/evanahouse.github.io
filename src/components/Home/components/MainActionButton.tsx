@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
 import { styled } from "@mui/system";
+import { useNavigate } from "react-router-dom";
 import { PALETTE } from "../../../constants/palette";
 import useIsMobile from "../../../hooks/useIsMobile";
 
@@ -26,10 +27,14 @@ const StyledButton = styled(Button)(({ theme }) => ({
 }));
 const MainActionButton = ({ showButton, to, children }: StyledButtonProps) => {
   const { isMobile } = useIsMobile();
+  const navigate = useNavigate();
 
   return (
     <StyledButton
       variant="contained"
+      onClick={() => {
+        navigate(to || "/");
+      }}
       sx={{
         opacity: showButton ? 1 : 0,
         typography: isMobile ? "h6" : "h3",
