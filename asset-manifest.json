@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c2ce7d60.css",
+    "main.js": "/static/js/main.67ec3c5a.js",
+    "static/js/787.d74c9d04.chunk.js": "/static/js/787.d74c9d04.chunk.js",
+    "static/media/primerPrintBold.otf": "/static/media/primerPrintBold.285eed6c8ab043603f98.otf",
+    "static/media/primerPrint.otf": "/static/media/primerPrint.fc972a2f09fa847dd5b8.otf",
+    "static/media/evanHouse2.jpeg": "/static/media/evanHouse2.b7f05e8f3753db90f24a.jpeg",
+    "static/media/logo.png": "/static/media/logo.090fec3c526a055b33eb.png",
+    "index.html": "/index.html",
+    "main.c2ce7d60.css.map": "/static/css/main.c2ce7d60.css.map",
+    "main.67ec3c5a.js.map": "/static/js/main.67ec3c5a.js.map",
+    "787.d74c9d04.chunk.js.map": "/static/js/787.d74c9d04.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c2ce7d60.css",
+    "static/js/main.67ec3c5a.js"
+  ]
+}
