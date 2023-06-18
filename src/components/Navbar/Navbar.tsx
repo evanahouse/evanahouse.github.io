@@ -136,19 +136,21 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <Box
-            component="img"
-            src={logo}
-            sx={{
-              display: { xs: "flex", md: "none" },
-              mr: 1,
-              maxWidth: 50,
-              position: "absolute",
-              left: "50%",
-              top: "50%",
-              transform: "translate(-50%, -50%)",
-            }}
-          />
+          <Box component="a" href="/">
+            <Box
+              component="img"
+              src={logo}
+              sx={{
+                display: { xs: "flex", md: "none" },
+                mr: 1,
+                maxWidth: 50,
+                position: "absolute",
+                left: "50%",
+                top: "50%",
+                transform: "translate(-50%, -50%)",
+              }}
+            />
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>
