@@ -74,7 +74,7 @@ const Home = () => {
               width: isMobile ? "75%" : "100%",
             }}
           />
-          <MainActionButton to={"/portfolio"} showButton={showButton}>
+          <MainActionButton to={"/portfolio"} showButton={true}>
             View Portfolio
           </MainActionButton>
           <Typography
@@ -84,7 +84,7 @@ const Home = () => {
           >
             or
           </Typography>
-          <MainActionButton to={"/resume"} showButton={showButton}>
+          <MainActionButton to={"/resume"} showButton={true}>
             Download Resume
           </MainActionButton>
         </Container>
