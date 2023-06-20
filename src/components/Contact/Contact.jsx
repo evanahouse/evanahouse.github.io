@@ -4,11 +4,17 @@ import { PALETTE } from "../../constants/palette";
 import ContactContainer from "./components/ContactContainer";
 import ContactForm from "./components/ContactForm";
 import { Container, Typography } from "@mui/material";
+import useIsMobile from "../../hooks/useIsMobile";
+
 
 const Contact = () => {
+  const { isMobile } = useIsMobile();
+
   return (
     <ScreenWrapper>
-      <ContactContainer maxWidth="xl">
+      <ContactContainer maxWidth="xl" sx={{
+        flexDirection: isMobile ? "column-reverse" : "row",
+      }}>
         <Container
           sx={{
             display: "flex",
