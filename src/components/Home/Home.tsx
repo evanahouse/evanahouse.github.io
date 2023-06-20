@@ -66,7 +66,7 @@ const Home = () => {
         >
           <Typography
             ref={el}
-            variant={isMobile ? "h6" : "h2"}
+            variant={isMobile ? "h6" : "h3"}
             align="left"
             sx={{
               pb: isMobile ? 2 : 5,

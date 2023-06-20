@@ -10,7 +10,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import { PALETTE } from "../../constants/palette";
 import getPageURL from "../../features/getPageURL";
@@ -30,6 +30,8 @@ function ResponsiveAppBar() {
   };
 
   const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location.pathname);
 
   return (
     <AppBar
@@ -72,7 +74,8 @@ function ResponsiveAppBar() {
                 }}
                 sx={{
                   my: 2,
-                  color: "white",
+                  color:
+                    location.pathname === getPageURL(page) ? "yellow" : "white",
                   display: "block",
                   typography: "h6",
 

@@ -36,13 +36,11 @@ const Contact = () => {
           }}
         >
           <Typography
-            variant="h2"
+            variant={isMobile ? "h4" : "h2"}
             sx={{
               color: PALETTE.primary,
-              fontSize: "clamp(2rem, 5vw, 4rem)",
-              fontWeight: "bold",
               textAlign: "center",
-              marginTop: "clamp(2rem, 5vw, 4rem)",
+              marginTop: isMobile ? "clamp(1rem, 3vw, 2rem)" : "clamp(2rem, 3vw, 2rem)",
             }}
           >
             GET IN TOUCH
