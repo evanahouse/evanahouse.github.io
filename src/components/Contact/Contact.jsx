@@ -3,28 +3,23 @@ import ScreenWrapper from "../../common/ScreenWrapper";
 import { PALETTE } from "../../constants/palette";
 import ContactContainer from "./components/ContactContainer";
 import ContactForm from "./components/ContactForm";
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, IconButton } from "@mui/material";
 import useIsMobile from "../../hooks/useIsMobile";
-
+import ProfilePhoto from "./components/ProfilePhoto";
+import { styled } from "@mui/system";
+import Footer from "./components/Footer";
 
 const Contact = () => {
   const { isMobile } = useIsMobile();
 
   return (
     <ScreenWrapper>
-      <ContactContainer maxWidth="xl" sx={{
-        flexDirection: isMobile ? "column-reverse" : "row",
-      }}>
-        <Container
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            width: "100%",
-            height: "100%",
-
-            backgroundColor: PALETTE.bgOne,
-          }}
-        />
+      <ContactContainer
+        maxWidth="xl"
+        sx={{
+          flexDirection: isMobile ? "column-reverse" : "row",
+        }}
+      >
         <Container
           sx={{
             display: "flex",
@@ -40,7 +35,9 @@ const Contact = () => {
             sx={{
               color: PALETTE.primary,
               textAlign: "center",
-              marginTop: isMobile ? "clamp(1rem, 3vw, 2rem)" : "clamp(2rem, 3vw, 2rem)",
+              marginTop: isMobile
+                ? "clamp(1rem, 3vw, 2rem)"
+                : "clamp(2rem, 3vw, 2rem)",
             }}
           >
             GET IN TOUCH
@@ -50,7 +47,6 @@ const Contact = () => {
             sx={{
               color: PALETTE.primary,
               fontSize: "clamp(1rem, 3vw, 2rem)",
-              fontWeight: "bold",
               textAlign: "center",
               marginTop: "clamp(1rem, 3vw, 2rem)",
               pb: "clamp(1rem, 3vw, 2rem)",
@@ -62,6 +58,19 @@ const Contact = () => {
           </Typography>
 
           <ContactForm />
+        </Container>
+        <Container
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            width: "100%",
+            height: "100%",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <ProfilePhoto />
+          <Footer />
         </Container>
       </ContactContainer>
     </ScreenWrapper>

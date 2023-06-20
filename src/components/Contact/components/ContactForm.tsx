@@ -2,6 +2,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { Grid, TextField, useTheme } from "@mui/material";
 import React from "react";
 import { Controller, useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { createMail } from "../../../api/firestore";
 import SubmitFormButton from "./SubmitFormButton";
@@ -28,6 +29,7 @@ const ContactForm: React.FC = () => {
     resolver: yupResolver(validationSchema),
   });
 
+  const navigate = useNavigate();
   const theme = useTheme();
 
   const onSubmit = async (data: FormData) => {
@@ -36,6 +38,7 @@ const ContactForm: React.FC = () => {
     const { name, email, message } = data;
     await createMail(name, email, message);
     reset();
+    navigate("/thankyou");
   };
 
   const inputProps = {

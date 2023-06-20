@@ -33,6 +33,10 @@ function ResponsiveAppBar() {
   const location = useLocation();
   console.log(location.pathname);
 
+  if (location.pathname === "/thankyou") {
+    return null;
+  }
+
   return (
     <AppBar
       position="sticky"

@@ -4,10 +4,10 @@ import { PALETTE } from "../constants/palette";
 
 const ScreenWrapper = styled(Box)(({ theme }) => ({
   backgroundColor: PALETTE.bgTwo,
-  minHeight: "100vh",
   justifyContent: "center",
   display: "flex",
   flexDirection: "column",
+  minHeight: "100vh",
 }));
 
 export default ScreenWrapper;

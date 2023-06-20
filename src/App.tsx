@@ -6,8 +6,11 @@ import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Resume from "./components/Resume/Resume";
+import ThankYou from "./components/ThankYou/ThankYou";
 import "./fonts.css";
 import theme from "./theme";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 
 function App() {
   return (
@@ -19,6 +22,7 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/thankyou" element={<ThankYou />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
