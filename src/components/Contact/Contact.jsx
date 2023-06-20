@@ -8,6 +8,7 @@ import useIsMobile from "../../hooks/useIsMobile";
 import ProfilePhoto from "./components/ProfilePhoto";
 import { styled } from "@mui/system";
 import Footer from "./components/Footer";
+import SocialButtonRow from "../../common/SocialButtonRow";
 
 const Contact = () => {
   const { isMobile } = useIsMobile();
@@ -18,6 +19,7 @@ const Contact = () => {
         maxWidth="xl"
         sx={{
           flexDirection: isMobile ? "column-reverse" : "row",
+          pt: isMobile ? "clamp(1rem, 3vw, 2rem)" : "clamp(2rem, 3vw, 2rem)",
         }}
       >
         <Container
@@ -28,6 +30,7 @@ const Contact = () => {
             height: "100%",
             alignItems: "center",
             justifyContent: "center",
+            pt: isMobile ? "clamp(1rem, 3vw, 2rem)" : "clamp(2rem, 3vw, 2rem)",
           }}
         >
           <Typography
@@ -58,6 +61,7 @@ const Contact = () => {
           </Typography>
 
           <ContactForm />
+          {isMobile && <SocialButtonRow />}
         </Container>
         <Container
           sx={{

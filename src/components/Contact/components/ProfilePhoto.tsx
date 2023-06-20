@@ -11,7 +11,7 @@ const ProfilePhoto = () => {
         mr: 1,
         ml: 1,
         mt: isMobile ? 0 : 1,
-        mb: isMobile ? 4 : 1,
+        mb: isMobile ? 1 : 1,
         maxWidth: isMobile ? 300 : 500, // Adjust the maxWidth based on the screen size
         width: "80%",
         alignSelf: isMobile ? "center" : "center",
