@@ -8,6 +8,7 @@ interface StyledButtonProps {
   showButton: boolean;
   to?: string | undefined;
   children?: React.ReactNode;
+  downloadAction?: any
 }
 
 const StyledButton = styled(Button)(({ theme }) => ({
@@ -25,15 +26,25 @@ const StyledButton = styled(Button)(({ theme }) => ({
     color: PALETTE.bgTwo,
   },
 }));
-const MainActionButton = ({ showButton, to, children }: StyledButtonProps) => {
+const MainActionButton = ({ showButton, to, children, downloadAction }: StyledButtonProps) => {
   const { isMobile } = useIsMobile();
   const navigate = useNavigate();
+
+  const handleOnClick = () => {
+    if (to) {
+      navigate(to);
+    } else if (downloadAction) {
+      downloadAction();
+    } else {
+      return;
+    }
+  };
 
   return (
     <StyledButton
       variant="contained"
       onClick={() => {
-        navigate(to || "/");
+        handleOnClick();
       }}
       sx={{
         opacity: showButton ? 1 : 0,

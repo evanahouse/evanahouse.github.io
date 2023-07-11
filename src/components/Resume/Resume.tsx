@@ -1,8 +1,9 @@
-import { Container, Typography } from "@mui/material";
+import { Container } from "@mui/material";
 import ScreenWrapper from "../../common/ScreenWrapper";
 import useIsMobile from "../../hooks/useIsMobile";
 import Spacer from "../Contact/components/Spacer";
 import MainActionButton from "../Home/components/MainActionButton";
+import DownloadResumeButton from "./DownloadResumeButton";
 import EducationSection from "./EducationSection";
 import ExperienceSection from "./ExperienceSection";
 import SkillsSection from "./SkillsSection";
@@ -17,18 +18,12 @@ const Resume = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          width: isMobile ? "100%" : "100%",
         }}
       >
         <Spacer />
         <Spacer />
-        <MainActionButton to={"/resume"} showButton={true}>
-          Download Resume
-        </MainActionButton>
+        <DownloadResumeButton />
         <Spacer />
-        {/* <Typography variant="h6" align="center" gutterBottom>
-          evanahouse@gmail.com | 203-206-8593 | New York, NY
-        </Typography> */}
         <Spacer />
         <SummarySection />
         <Spacer />
