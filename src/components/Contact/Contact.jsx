@@ -9,12 +9,27 @@ import ProfilePhoto from "./components/ProfilePhoto";
 import { styled } from "@mui/system";
 import Footer from "./components/Footer";
 import SocialButtonRow from "../../common/SocialButtonRow";
+import LoadingModal from "../../common/LoadingModal";
+import { useEffect, useState } from "react";
 
 const Contact = () => {
   const { isMobile } = useIsMobile();
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <ScreenWrapper>
+      <LoadingModal loading={loading} />
       <ContactContainer
         maxWidth="xl"
         sx={{

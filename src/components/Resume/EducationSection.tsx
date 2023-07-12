@@ -1,7 +1,7 @@
 import { Container, Paper, Typography } from "@mui/material";
+import Spacer from "../../common/Spacer";
 import useIsMobile from "../../hooks/useIsMobile";
 import EducationItem from "./EducationItem";
-import Spacer from "../Contact/components/Spacer";
 
 const EducationSection = () => {
   const { isMobile } = useIsMobile();
@@ -25,11 +25,10 @@ const EducationSection = () => {
         />
         <Spacer />
         <EducationItem
-            title="Software Engineering, Full-Stack"
-            subtitle="Flatiron School, Seattle, WA"
-            timeline="January 2021 - June 2021"
+          title="Software Engineering, Full-Stack"
+          subtitle="Flatiron School, Seattle, WA"
+          timeline="January 2021 - June 2021"
         />
-
       </Paper>
     </Container>
   );
