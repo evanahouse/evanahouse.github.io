@@ -28,14 +28,14 @@ const ToggleAppButtons = ({
         <ToggleButton
           value="scatterbrainz"
           sx={{
-            fontSize: isMobile ? ".6rem" : "1.5rem",
+            fontSize: isMobile ? ".75rem" : "1.5rem",
           }}
         >
           ScatterBrainz
         </ToggleButton>
         <ToggleButton
           sx={{
-            fontSize: isMobile ? ".6rem" : "1.5rem",
+            fontSize: isMobile ? ".75rem" : "1.5rem",
           }}
           value="onebook"
         >
@@ -43,7 +43,7 @@ const ToggleAppButtons = ({
         </ToggleButton>
         <ToggleButton
           sx={{
-            fontSize: isMobile ? ".6rem" : "1.5rem",
+            fontSize: isMobile ? ".75rem" : "1.5rem",
           }}
           value="othermind"
         >

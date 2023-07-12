@@ -14,7 +14,7 @@ const MediaContent = () => {
         display: "flex",
         alignItems: "normal",
         justifyContent: "left",
-        height: isMobile ? "60%" : "60%",
+        height: isMobile ? "65%" : "60%",
         minWidth: isMobile ? "50%" : 400,
         width: isMobile ? "100%" : "50%",
         flexDirection: isMobile ? "column" : "row",

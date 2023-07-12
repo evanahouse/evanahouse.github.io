@@ -13,7 +13,7 @@ const SwiperCard = ({ src }: SwiperCardProps) => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        width: isMobile ? 150 : 350, // Set the width based on the screen size
+        width: isMobile ? 175 : 350, // Set the width based on the screen size
         boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)", // Add shadow
         borderRadius: isMobile ? 8 : 16, // Add border radius
         overflow: "hidden", // Hide overflow content

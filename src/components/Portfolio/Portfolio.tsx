@@ -67,7 +67,7 @@ const Portfolio = () => {
         <Container
           sx={{
             display: "flex",
-            flexDirection: isMobile ? "column" : "row",
+            flexDirection: isMobile ? "column-reverse" : "row",
             justifyContent: isMobile ? "flex-start" : "space-between",
           }}
         >

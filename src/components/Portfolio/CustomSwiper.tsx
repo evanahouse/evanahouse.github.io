@@ -11,12 +11,13 @@ import SwiperCore, {
 // import "swiper/css/effect-cards";
 import { Swiper } from "swiper/react";
 import "swiper/swiper-bundle.css";
+import useIsMobile from "../../hooks/useIsMobile";
 
 interface CustomSwiperProps {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }
 
-const CustomSwiper = ({children}: CustomSwiperProps) => {
+const CustomSwiper = ({ children }: CustomSwiperProps) => {
   SwiperCore.use([
     Navigation,
     Pagination,
@@ -26,6 +27,8 @@ const CustomSwiper = ({children}: CustomSwiperProps) => {
     EffectCoverflow,
     Keyboard,
   ]);
+  const { isMobile } = useIsMobile();
+
   return (
     <Swiper
       effect="coverflow"
@@ -34,7 +37,7 @@ const CustomSwiper = ({children}: CustomSwiperProps) => {
       spaceBetween={0}
       slidesPerView={1}
       loop={true}
-      pagination={{ clickable: true, dynamicBullets: true }}
+      pagination={isMobile ? false : { clickable: true, dynamicBullets: true }}
       coverflowEffect={{
         rotate: 20,
         stretch: 25,
@@ -52,4 +55,3 @@ const CustomSwiper = ({children}: CustomSwiperProps) => {
 };
 
 export default CustomSwiper;
-
