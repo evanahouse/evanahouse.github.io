@@ -15,9 +15,10 @@ import useIsMobile from "../../hooks/useIsMobile";
 
 interface CustomSwiperProps {
   children: React.ReactNode;
+  onSlideChange?: (swiper:any) => void;
 }
 
-const CustomSwiper = ({ children }: CustomSwiperProps) => {
+const CustomSwiper = ({ children, onSlideChange }: CustomSwiperProps) => {
   SwiperCore.use([
     Navigation,
     Pagination,
@@ -31,12 +32,13 @@ const CustomSwiper = ({ children }: CustomSwiperProps) => {
 
   return (
     <Swiper
+      onSlideChange={onSlideChange} // Pass the onSlideChange prop to handle slide change event
       effect="coverflow"
       grabCursor={true}
       // centeredSlides={true}
       spaceBetween={0}
       slidesPerView={1}
-      loop={true}
+      // loop={true}
       pagination={isMobile ? false : { clickable: true, dynamicBullets: true }}
       coverflowEffect={{
         rotate: 20,

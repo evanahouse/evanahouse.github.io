@@ -1,16 +1,16 @@
-import AppleIcon from "@mui/icons-material/Apple";
-import GoogleIcon from "@mui/icons-material/Google";
 import { Container, Paper, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
-import SocialButton from "../../common/SocialButton";
+import { SLIDES } from "../../constants/slides";
 import useIsMobile from "../../hooks/useIsMobile";
 
 interface InfoContentProps {
   selectedApp: "scatterbrainz" | "onebook" | "othermind";
+  activeSlideIndex: number;
 }
 
-const InfoContent = ({selectedApp}: InfoContentProps) => {
+const InfoContent = ({ selectedApp, activeSlideIndex }: InfoContentProps) => {
   const { isMobile } = useIsMobile();
+
+  const selectedSlide = SLIDES[selectedApp][activeSlideIndex];
 
   return (
     <Container
@@ -28,7 +28,7 @@ const InfoContent = ({selectedApp}: InfoContentProps) => {
               App: ScatterBrainz
             </Typography>
             <Typography variant={isMobile ? "h6" : "h4"} gutterBottom>
-              Screen: "Time To Eat"
+              {"Screen: " + `"` + selectedSlide?.screen + `"`}
             </Typography>
           </>
         )}
@@ -39,7 +39,7 @@ const InfoContent = ({selectedApp}: InfoContentProps) => {
           }}
           gutterBottom
         >
-          Description: Here is a brief description of the screen.
+          {"Description: " + selectedSlide?.description}
         </Typography>
       </Paper>
     </Container>

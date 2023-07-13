@@ -2,6 +2,7 @@ import Box from "@mui/material/Box";
 import useIsMobile from "../../hooks/useIsMobile";
 
 interface SwiperCardProps {
+
   src: string;
 }
 

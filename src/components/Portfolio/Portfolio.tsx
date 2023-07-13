@@ -35,6 +35,8 @@ const Portfolio = () => {
   const [selectedApp, setSelectedApp] = useState<
     "scatterbrainz" | "othermind" | "onebook"
   >("scatterbrainz");
+  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+
   // const [loading, setLoading] = useState(true);
 
   // useEffect(() => {
@@ -46,7 +48,7 @@ const Portfolio = () => {
 
   //   return () => clearTimeout(timer);
   // }, []);
-  console.log("selectedApp", selectedApp);
+
   const handleAppChange = (
     event: any,
     newApp: "scatterbrainz" | "onebook" | "othermind"
@@ -54,6 +56,11 @@ const Portfolio = () => {
     setSelectedApp(newApp);
   };
 
+  const handleSlideChange = (swiper: any) => {
+    setActiveSlideIndex(swiper.activeIndex);
+  };
+
+  console.log("activeSlideIndex", activeSlideIndex);
   return (
     <ScreenWrapper
       sx={{
@@ -91,9 +98,15 @@ const Portfolio = () => {
             width: "100%",
           }}
         >
-          <MediaContent selectedApp={selectedApp} />
+          <MediaContent
+            onSlideChange={handleSlideChange}
+            selectedApp={selectedApp}
+          />
           {isMobile && <Spacer />}
-          <InfoContent selectedApp={selectedApp} />
+          <InfoContent
+            selectedApp={selectedApp}
+            activeSlideIndex={activeSlideIndex}
+          />
         </Container>
         <Spacer />
         <Spacer />

@@ -1,16 +1,16 @@
 import { Container } from "@mui/material";
 import { SwiperSlide } from "swiper/react";
-import Spacer from "../../common/Spacer";
-import { IMAGES } from "../../constants/images";
+import { SLIDES } from "../../constants/slides";
 import useIsMobile from "../../hooks/useIsMobile";
 import CustomSwiper from "./CustomSwiper";
 import SwiperCard from "./SwiperCard";
 
 interface MediaContentProps {
   selectedApp: "scatterbrainz" | "onebook" | "othermind";
+  onSlideChange?: (swiper:any) => void;
 }
 
-const MediaContent = ({selectedApp}: MediaContentProps) => {
+const MediaContent = ({selectedApp, onSlideChange}: MediaContentProps) => {
   const { isMobile } = useIsMobile();
 
   return (
@@ -25,19 +25,12 @@ const MediaContent = ({selectedApp}: MediaContentProps) => {
         flexDirection: "column" 
       }}
     >
-      <CustomSwiper>
-        <SwiperSlide>
-          <SwiperCard src={IMAGES.ScatterBrainzTimeToEat} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <SwiperCard src={IMAGES.ScatterBrainzLists} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <SwiperCard src={IMAGES.ScatterBrainzHome} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <SwiperCard src={IMAGES.ScatterBrainzFamilyHeadquarters} />
-        </SwiperSlide>
+      <CustomSwiper onSlideChange={onSlideChange}>
+        {SLIDES[selectedApp]?.map((slide, index) => (
+          <SwiperSlide key={index}>
+              <SwiperCard src={slide.src}  />
+          </SwiperSlide>
+        ))}
       </CustomSwiper>
  
     </Container>
