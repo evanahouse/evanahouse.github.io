@@ -109,7 +109,6 @@ const Portfolio = () => {
           />
         </Container>
         <Spacer />
-        <Spacer />
         <Footer selectedApp={selectedApp} />
       </PortfolioContainer>
     </ScreenWrapper>
