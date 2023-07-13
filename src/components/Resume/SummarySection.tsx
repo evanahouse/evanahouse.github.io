@@ -13,13 +13,13 @@ const SummarySection = () => {
       }}
     >
       <Paper elevation={3} sx={{ padding: 2 }}>
-        <Typography variant="h4" gutterBottom>
+        <Typography variant={isMobile ? "h6" : "h4"} gutterBottom>
           Summary
         </Typography>
         <Typography
           variant="subtitle1"
           sx={{
-            fontSize: "1.25rem",
+            fontSize: isMobile? ".9rem": "1.25rem",
           }}
         >
           Dynamic engineer adept at both machine and personal communication.

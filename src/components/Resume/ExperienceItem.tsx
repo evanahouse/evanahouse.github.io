@@ -1,4 +1,5 @@
 import { Typography } from "@mui/material";
+import useIsMobile from "../../hooks/useIsMobile";
 interface ExperienceItemProps {
   title: string;
   timeline: string;
@@ -16,10 +17,12 @@ const ExperienceItem = ({
   description,
   otherExperience,
 }: ExperienceItemProps) => {
+  const { isMobile } = useIsMobile();
+
   return (
     <>
       <Typography
-        variant="h5"
+        variant={isMobile ? "h6" : "h5"}
         sx={{
           textDecoration: "underline",
         }}
@@ -29,7 +32,7 @@ const ExperienceItem = ({
       <Typography
         variant="h6"
         sx={{
-          fontSize: "1.25rem",
+          fontSize: isMobile ? ".9rem" : "1.25rem",
           fontStyle: "italic",
         }}
       >
@@ -40,7 +43,7 @@ const ExperienceItem = ({
         <Typography
           variant="h6"
           sx={{
-            fontSize: "1.25rem",
+            fontSize: isMobile ? ".9rem" : "1.25rem",
           }}
         >
           {" "}
@@ -58,7 +61,7 @@ const ExperienceItem = ({
       <Typography
         variant="h6"
         sx={{
-          fontSize: "1.25rem",
+          fontSize: isMobile ? ".9rem" : "1.25rem",
         }}
       >
         {description.map((item: any) => {

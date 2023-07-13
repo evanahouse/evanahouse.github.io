@@ -1,23 +1,28 @@
 import { Container } from "@mui/material";
 import { SwiperSlide } from "swiper/react";
+import Spacer from "../../common/Spacer";
 import { IMAGES } from "../../constants/images";
 import useIsMobile from "../../hooks/useIsMobile";
 import CustomSwiper from "./CustomSwiper";
 import SwiperCard from "./SwiperCard";
 
-const MediaContent = () => {
+interface MediaContentProps {
+  selectedApp: "scatterbrainz" | "onebook" | "othermind";
+}
+
+const MediaContent = ({selectedApp}: MediaContentProps) => {
   const { isMobile } = useIsMobile();
 
   return (
     <Container
       sx={{
         display: "flex",
-        alignItems: "normal",
+        alignItems: "center",
         justifyContent: "left",
         height: isMobile ? "65%" : "60%",
         minWidth: isMobile ? "50%" : 400,
         width: isMobile ? "100%" : "50%",
-        flexDirection: isMobile ? "column" : "row",
+        flexDirection: "column" 
       }}
     >
       <CustomSwiper>
@@ -33,9 +38,8 @@ const MediaContent = () => {
         <SwiperSlide>
           <SwiperCard src={IMAGES.ScatterBrainzFamilyHeadquarters} />
         </SwiperSlide>
-
-        <div slot="pagination" className="swiper-pagination" />
       </CustomSwiper>
+ 
     </Container>
   );
 };

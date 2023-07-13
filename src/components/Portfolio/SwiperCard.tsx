@@ -13,8 +13,8 @@ const SwiperCard = ({ src }: SwiperCardProps) => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+
         width: isMobile ? 175 : 350, // Set the width based on the screen size
-        boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)", // Add shadow
         borderRadius: isMobile ? 8 : 16, // Add border radius
         overflow: "hidden", // Hide overflow content
         position: "relative", // Position the box
@@ -22,7 +22,10 @@ const SwiperCard = ({ src }: SwiperCardProps) => {
         margin: "0 auto", // Center the box horizontally
         padding: "4px", // Add a small padding
         backgroundColor: "black", // Add a background color
+        // boxShadow: "0 0 16px rgba(0, 0, 0, 0.25)",
       }}
+      //add a box shadow
+  
     >
       <Box
         component="img"

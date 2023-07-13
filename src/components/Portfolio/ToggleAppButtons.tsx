@@ -3,7 +3,10 @@ import useIsMobile from "../../hooks/useIsMobile";
 
 interface ToggleAppButtonsProps {
   selectedApp: string;
-  handleAppChange: (event: any, newApp: string) => void;
+  handleAppChange: (
+    event: any,
+    newApp: "scatterbrainz" | "onebook" | "othermind"
+  ) => void;
 }
 const ToggleAppButtons = ({
   selectedApp,
@@ -55,4 +58,3 @@ const ToggleAppButtons = ({
 };
 
 export default ToggleAppButtons;
-

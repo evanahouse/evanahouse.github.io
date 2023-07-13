@@ -15,6 +15,7 @@ import "swiper/swiper-bundle.css";
 import ScreenWrapper from "../../common/ScreenWrapper";
 import Spacer from "../../common/Spacer";
 import useIsMobile from "../../hooks/useIsMobile";
+import Footer from "./Footer";
 import InfoContent from "./InfoContent";
 import MediaContent from "./MediaContent";
 import PortfolioContainer from "./PortfolioContainer";
@@ -31,9 +32,25 @@ const Portfolio = () => {
     Keyboard,
   ]);
   const { isMobile } = useIsMobile();
-  const [selectedApp, setSelectedApp] = useState("scatterbrainz");
+  const [selectedApp, setSelectedApp] = useState<
+    "scatterbrainz" | "othermind" | "onebook"
+  >("scatterbrainz");
+  // const [loading, setLoading] = useState(true);
 
-  const handleAppChange = (event: any, newApp: string) => {
+  // useEffect(() => {
+  //   setLoading(true);
+
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 3000);
+
+  //   return () => clearTimeout(timer);
+  // }, []);
+  console.log("selectedApp", selectedApp);
+  const handleAppChange = (
+    event: any,
+    newApp: "scatterbrainz" | "onebook" | "othermind"
+  ) => {
     setSelectedApp(newApp);
   };
 
@@ -43,6 +60,8 @@ const Portfolio = () => {
         flexDirection: "row",
       }}
     >
+      {/* <LoadingModal loading={loading} /> */}
+
       <PortfolioContainer
         maxWidth="xl"
         sx={{
@@ -67,14 +86,18 @@ const Portfolio = () => {
         <Container
           sx={{
             display: "flex",
-            flexDirection: isMobile ? "column-reverse" : "row",
+            flexDirection: isMobile ? "column" : "row",
             justifyContent: isMobile ? "flex-start" : "space-between",
+            width: "100%",
           }}
         >
-          <MediaContent />
+          <MediaContent selectedApp={selectedApp} />
           {isMobile && <Spacer />}
-          <InfoContent />
+          <InfoContent selectedApp={selectedApp} />
         </Container>
+        <Spacer />
+        <Spacer />
+        <Footer selectedApp={selectedApp} />
       </PortfolioContainer>
     </ScreenWrapper>
   );

@@ -15,7 +15,7 @@ const EducationSection = () => {
       }}
     >
       <Paper elevation={3} sx={{ padding: 2 }}>
-        <Typography variant="h4" gutterBottom>
+        <Typography variant={isMobile ? "h6" : "h4"} gutterBottom>
           Education
         </Typography>
         <EducationItem

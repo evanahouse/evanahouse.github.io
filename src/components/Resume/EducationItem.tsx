@@ -1,31 +1,27 @@
 import { Typography } from "@mui/material";
+import useIsMobile from "../../hooks/useIsMobile";
 
 interface EducationItemProps {
-    title: string;
-    subtitle: string;
-    timeline: string;
+  title: string;
+  subtitle: string;
+  timeline: string;
 }
 
-const EducationItem = ({title, subtitle, timeline}: EducationItemProps) => {
+const EducationItem = ({ title, subtitle, timeline }: EducationItemProps) => {
+  const { isMobile } = useIsMobile();
+
   return (
     <>
-     
-      <Typography
-        variant="h5"
-        
-      >
+      <Typography variant={isMobile ? "h6" : "h5"}>
         {title} <br />
       </Typography>
-      <Typography
-        variant="h6"
-       
-      >
+      <Typography variant="h6">
         {subtitle} <br />
       </Typography>
       <Typography
         variant="h6"
         sx={{
-          fontSize: "1.25rem",
+          fontSize: isMobile ? "0.9rem" : "1.25rem",
           fontStyle: "italic",
         }}
       >
@@ -37,4 +33,3 @@ const EducationItem = ({title, subtitle, timeline}: EducationItemProps) => {
 };
 
 export default EducationItem;
-

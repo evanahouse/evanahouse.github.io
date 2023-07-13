@@ -9,6 +9,7 @@ interface StyledButtonProps {
   to?: string | undefined;
   children?: React.ReactNode;
   downloadAction?: any
+  website?: string | undefined;
 }
 
 const StyledButton = styled(Button)(({ theme }) => ({
@@ -26,7 +27,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
     color: PALETTE.bgTwo,
   },
 }));
-const MainActionButton = ({ showButton, to, children, downloadAction }: StyledButtonProps) => {
+const MainActionButton = ({ showButton, to, children, downloadAction, website }: StyledButtonProps) => {
   const { isMobile } = useIsMobile();
   const navigate = useNavigate();
 
@@ -35,7 +36,10 @@ const MainActionButton = ({ showButton, to, children, downloadAction }: StyledBu
       navigate(to);
     } else if (downloadAction) {
       downloadAction();
-    } else {
+    } else if(website) {
+      window.open(website, "_blank");
+    }
+     else {
       return;
     }
   };
