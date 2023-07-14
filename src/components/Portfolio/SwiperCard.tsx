@@ -26,7 +26,6 @@ const SwiperCard = ({ src }: SwiperCardProps) => {
         // boxShadow: "0 0 16px rgba(0, 0, 0, 0.25)",
       }}
       //add a box shadow
-  
     >
       <Box
         component="img"
@@ -36,6 +35,7 @@ const SwiperCard = ({ src }: SwiperCardProps) => {
           objectFit: "cover",
           position: "relative", // Position the image
           zIndex: 1, // Bring the image to the front
+          borderRadius: isMobile ? 8 : 16, // Add border radius
         }}
         src={src}
       />
@@ -47,7 +47,7 @@ const SwiperCard = ({ src }: SwiperCardProps) => {
           right: -4, // Adjust the value to position the border correctly
           bottom: -4, // Adjust the value to position the border correctly
           border: "2px solid black", // Add border
-          borderRadius: 16, // Make it match the border radius
+          borderRadius: isMobile ? 8 : 16, // Add border radius
           zIndex: 0, // Place the border behind the image
         }}
       />
