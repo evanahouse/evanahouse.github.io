@@ -102,6 +102,13 @@ const Home = () => {
                 variant={isMobile ? "h6" : "h3"}
                 align="left"
                 sx={{
+                  fontSize: {
+                    xs: "1rem",
+                    sm: "1.7rem",
+                    md: "1.7rem",
+                    lg: "2.5rem",
+                    xl: "2.5rem",
+                  },
                   pb: isMobile ? 2 : 5,
                   alignSelf: "center",
                   width: isMobile ? "100%" : "100%",
@@ -118,7 +125,7 @@ const Home = () => {
                 View Portfolio
               </MainActionButton>
               <Typography
-                variant={isMobile ? "h6" : "h2"}
+                variant={isMobile ? "h6" : "h4"}
                 align="center"
                 sx={{ opacity: showButton ? 1 : 0 }}
               >

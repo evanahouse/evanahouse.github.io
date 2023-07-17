@@ -64,11 +64,7 @@ const Portfolio = () => {
 
   console.log("activeSlideIndex", activeSlideIndex);
   return (
-    <ScreenWrapper
-      sx={{
-        // flexDirection: "row",
-      }}
-    >
+    <ScreenWrapper sx={{}}>
       <Navbar />
       {/* <LoadingModal loading={loading} /> */}
 
@@ -79,20 +75,23 @@ const Portfolio = () => {
           height: isMobile ? "100%" : "100%",
           justifyContent: "flex-start",
           alignItems: "flex-start",
-          marginTop: isMobile ? 2 : 10,
+          marginTop: isMobile ? 2 : 2,
+          flex: 1,
         }}
       >
         <ToggleAppButtons
           selectedApp={selectedApp}
           handleAppChange={handleAppChange}
         />
-       
+
         <Container
           sx={{
             display: "flex",
             flexDirection: isMobile ? "column" : "row",
-            justifyContent: isMobile ? "flex-start" : "space-between",
+            justifyContent: isMobile ? "flex-start" : "flex-start",
             width: "100%",
+            flex: 1,
+            pt:1
           }}
         >
           <MediaContent
@@ -100,13 +99,24 @@ const Portfolio = () => {
             selectedApp={selectedApp}
           />
           {isMobile && <Spacer />}
-          <InfoContent
-            selectedApp={selectedApp}
-            activeSlideIndex={activeSlideIndex}
-          />
+          <Container
+            sx={{
+              display: "flex",
+              alignItems: "flex-start",
+              justifyContent: "flex-start",
+              flexDirection: "column",
+              flex: 1,
+            }}
+          >
+            <InfoContent
+              selectedApp={selectedApp}
+              activeSlideIndex={activeSlideIndex}
+            />
+            {/* <Spacer />
+            <Footer selectedApp={selectedApp} /> */}
+          </Container>
         </Container>
         <Spacer />
-        <Footer selectedApp={selectedApp} />
       </PortfolioContainer>
     </ScreenWrapper>
   );

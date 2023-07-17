@@ -18,11 +18,13 @@ const MediaContent = ({selectedApp, onSlideChange}: MediaContentProps) => {
       sx={{
         display: "flex",
         alignItems: "center",
-        justifyContent: "left",
-        height: isMobile ? "65%" : "60%",
-        minWidth: isMobile ? "50%" : 400,
+        justifyContent: "center",
+        height: isMobile ? "65%" : "100%",
+        // minWidth: isMobile ? "50%" : 400,
         width: isMobile ? "100%" : "50%",
-        flexDirection: "column" 
+        flexDirection: "column" ,
+        flex:1,
+        alignSelf: "center",
       }}
     >
       <CustomSwiper onSlideChange={onSlideChange}>

@@ -15,7 +15,7 @@ import useIsMobile from "../../hooks/useIsMobile";
 
 interface CustomSwiperProps {
   children: React.ReactNode;
-  onSlideChange?: (swiper:any) => void;
+  onSlideChange?: (swiper: any) => void;
 }
 
 const CustomSwiper = ({ children, onSlideChange }: CustomSwiperProps) => {
@@ -49,7 +49,15 @@ const CustomSwiper = ({ children, onSlideChange }: CustomSwiperProps) => {
       }}
       navigation={true}
       keyboard={{ enabled: true }}
-      style={{ width: "100%", height: "100%", alignSelf: "center" }}
+      style={{
+        width: "100%",
+        height: "100%",
+        alignSelf: "center",
+        alignItems: "center",
+        justifyContent: "center",
+        flex: 1,
+        display: "flex",
+      }}
     >
       {children}
     </Swiper>

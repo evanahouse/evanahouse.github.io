@@ -2,7 +2,6 @@ import Box from "@mui/material/Box";
 import useIsMobile from "../../hooks/useIsMobile";
 
 interface SwiperCardProps {
-
   src: string;
 }
 
@@ -15,7 +14,16 @@ const SwiperCard = ({ src }: SwiperCardProps) => {
         alignItems: "center",
         justifyContent: "center",
 
-        width: isMobile ? 175 : 350, // Set the width based on the screen size
+        // width: isMobile ? 170 : 300,
+        width: {
+          xs: 170,
+          sm: 200,
+          md: 200,
+          lg: 225,
+          xl: 310,
+        },
+        // Set the width based on the screen size
+        // Set the width based on the screen size
         borderRadius: isMobile ? 8 : 16, // Add border radius
         overflow: "hidden", // Hide overflow content
         position: "relative", // Position the box

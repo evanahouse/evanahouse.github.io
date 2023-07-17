@@ -20,7 +20,7 @@ const ToggleAppButtons = ({
         height: isMobile ? "10%" : 50,
         display: "flex",
         justifyContent: "center",
-        marginBottom: isMobile ? 2 : 10,
+        marginBottom: isMobile ? 2 : 2,
       }}
     >
       <ToggleButtonGroup
@@ -31,7 +31,7 @@ const ToggleAppButtons = ({
         <ToggleButton
           value="scatterbrainz"
           sx={{
-            fontSize: isMobile ? ".75rem" : "1.5rem",
+            fontSize: isMobile ? ".75rem" : "1.25rem",
           }}
           //disabled if scatterbrainz is selected
           disabled={selectedApp === "scatterbrainz"}
@@ -40,7 +40,7 @@ const ToggleAppButtons = ({
         </ToggleButton>
         <ToggleButton
           sx={{
-            fontSize: isMobile ? ".75rem" : "1.5rem",
+            fontSize: isMobile ? ".75rem" : "1.25rem",
           }}
           disabled={selectedApp === "onebook"}
           value="onebook"

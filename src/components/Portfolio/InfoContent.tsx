@@ -1,6 +1,7 @@
 import { Container, Paper, Typography } from "@mui/material";
 import { SLIDES } from "../../constants/slides";
 import useIsMobile from "../../hooks/useIsMobile";
+import Footer from "./Footer";
 
 interface InfoContentProps {
   selectedApp: "scatterbrainz" | "onebook" | "othermind";
@@ -16,9 +17,12 @@ const InfoContent = ({ selectedApp, activeSlideIndex }: InfoContentProps) => {
     <Container
       sx={{
         display: "flex",
-
-        height: isMobile ? "60%" : "60%",
-        width: isMobile ? "100%" : "50%",
+        height: isMobile ? "60%" : "100%",
+        width: isMobile ? "100%" : "100%",
+        alignItems: "center",
+        justifyContent: "center",
+        alignSelf: "flex-start",
+        flexDirection: "column",
       }}
     >
       <Paper elevation={3} sx={{ padding: 2, width: "100%" }}>
@@ -42,6 +46,7 @@ const InfoContent = ({ selectedApp, activeSlideIndex }: InfoContentProps) => {
           {"Description: " + selectedSlide?.description}
         </Typography>
       </Paper>
+      <Footer selectedApp={selectedApp} />
     </Container>
   );
 };

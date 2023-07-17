@@ -23,8 +23,8 @@ const Footer = ({ selectedApp }: FooterProps) => {
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        marginTop: 2,
-        //show at bottom of container
+        alignSelf: "left",
+        paddingTop: 2,
       }}
     >
       <Typography
@@ -44,11 +44,11 @@ const Footer = ({ selectedApp }: FooterProps) => {
       >
         <SocialButton
           sx={{
-            width: isMobile ? 50 : 100,
-            height: isMobile ? 50 : 100,
+            width: isMobile ? 50 : 60,
+            height: isMobile ? 50 : 60,
           }}
         >
-          <AppleIcon sx={{ fontSize: isMobile ? 30 : 40 }} />
+          <AppleIcon sx={{ fontSize: isMobile ? 30 : 30 }} />
         </SocialButton>
       </Link>
       <Link
@@ -59,11 +59,11 @@ const Footer = ({ selectedApp }: FooterProps) => {
       >
         <SocialButton
           sx={{
-            width: isMobile ? 50 : 100,
-            height: isMobile ? 50 : 100,
+            width: isMobile ? 50 : 60,
+            height: isMobile ? 50 : 60,
           }}
         >
-          <GoogleIcon sx={{ fontSize: isMobile ? 30 : 40 }} />
+          <GoogleIcon sx={{ fontSize: isMobile ? 30 : 30 }} />
         </SocialButton>
       </Link>
     </Container>
