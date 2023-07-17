@@ -55,6 +55,7 @@ const Portfolio = () => {
     newApp: "scatterbrainz" | "onebook" | "othermind"
   ) => {
     setSelectedApp(newApp);
+    setActiveSlideIndex(0);
   };
 
   const handleSlideChange = (swiper: any) => {
