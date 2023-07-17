@@ -33,6 +33,7 @@ const SubmitFormButton = ({  children }: StyledButtonProps) => {
         typography: isMobile ? "h6" : "h3",
         mt: isMobile ? 0 : 0,
         mb: isMobile ? 0 : 0,
+        width: isMobile ? "100%" : "100%",
       }}
     >
       {children}
