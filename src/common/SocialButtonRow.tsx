@@ -31,8 +31,8 @@ const SocialButtonRow = () => {
       >
         <SocialButton
           sx={{
-            width: isMobile ? 50 : 75,
-            height: isMobile ? 50 : 75,
+            width: isMobile ? 50 : 60,
+            height: isMobile ? 50 : 60,
           }}
         >
           <LinkedInIcon sx={{ fontSize: isMobile ? 30 : 40 }} />
@@ -46,8 +46,8 @@ const SocialButtonRow = () => {
       >
         <SocialButton
           sx={{
-            width: isMobile ? 50 : 75,
-            height: isMobile ? 50 : 75,
+            width: isMobile ? 50 : 60,
+            height: isMobile ? 50 : 60,
           }}
         >
           <GitHubIcon sx={{ fontSize: isMobile ? 30 : 40 }} />
@@ -62,8 +62,8 @@ const SocialButtonRow = () => {
         <SocialButton
           onClick={() => {}}
           sx={{
-            width: isMobile ? 50 : 75,
-            height: isMobile ? 50 : 75,
+            width: isMobile ? 50 : 60,
+            height: isMobile ? 50 : 60,
           }}
         >
           <BsMedium size={isMobile ? 30 : 40} />
@@ -78,8 +78,8 @@ const SocialButtonRow = () => {
         <SocialButton
           onClick={() => {}}
           sx={{
-            width: isMobile ? 50 : 75,
-            height: isMobile ? 50 : 75,
+            width: isMobile ? 50 : 60,
+            height: isMobile ? 50 : 60,
           }}
         >
           <InstagramIcon sx={{ fontSize: isMobile ? 30 : 40 }} />

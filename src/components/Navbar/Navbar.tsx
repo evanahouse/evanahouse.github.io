@@ -40,7 +40,13 @@ function ResponsiveAppBar() {
   return (
     <AppBar
       position="sticky"
-      sx={{ backgroundColor: PALETTE.bgOne, minHeight: 50 }}
+      sx={{
+        backgroundColor: PALETTE.bgOne,
+        minHeight: 50,
+        alignSelf: "flex-start",
+        top: 0,
+        display: "block",
+      }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>

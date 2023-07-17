@@ -12,7 +12,13 @@ const ProfilePhoto = () => {
         ml: 1,
         mt: isMobile ? 0 : 1,
         mb: isMobile ? 1 : 1,
-        maxWidth: isMobile ? 300 : 500, // Adjust the maxWidth based on the screen size
+            maxWidth: {
+          xs: 150,
+          sm: 250,
+          md: 250,
+          lg: 300,
+          xl: 600,
+        }, // Adjust the maxWidth based on the screen size
         width: "80%",
         alignSelf: isMobile ? "center" : "center",
         //remove white space around image

@@ -12,9 +12,14 @@ const ProfilePhoto = () => {
         ml: 1,
         mt: isMobile ? 0 : 1,
         mb: isMobile ? 4 : 1,
-        maxWidth: isMobile ? 200 : 500, // Adjust the maxWidth based on the screen size
-        alignSelf: isMobile ? "center" : "flex-start",
-
+        maxWidth: {
+          xs: 150,
+          sm: 250,
+          md: 250,
+          lg: 400,
+          xl: 600,
+        },
+        alignSelf: isMobile ? "center" : "center",
       }}
       src={logo}
     />

@@ -10,7 +10,6 @@ import useIsMobile from "../../../hooks/useIsMobile";
 const RowContainer = styled(Container)(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
-  marginTop: theme.spacing(2),
   paddingBottom: theme.spacing(2),
   alignItems: "center",
   alignSelf: "center",
@@ -32,26 +31,29 @@ const Footer = () => {
   const { isMobile } = useIsMobile();
   const navigate = useNavigate();
 
- 
   return (
     <RowContainer
       sx={{
-        height: isMobile ? 50 : 100,
+        height: isMobile ? 100 : 100,
+        backgroundColor: PALETTE.bgTwo,
+        justifyContent: "center",
+        alignItems: "center",
+        display: "flex",
+        // flex: 1,
+        p: isMobile ? 2 : 2,
       }}
     >
-     
-        <SocialButton
+      <SocialButton
         onClick={() => {
-          navigate("/contact")
-        }
-        }
-          sx={{
-            width: isMobile ? 50 : 100,
-            height: isMobile ? 50 : 100,
-          }}
-        >
-          <EmailIcon sx={{ fontSize: isMobile ? 30 : 40 }} />
-        </SocialButton>
+          navigate("/contact");
+        }}
+        sx={{
+          width: isMobile ? 50 : 100,
+          height: isMobile ? 50 : 100,
+        }}
+      >
+        <EmailIcon sx={{ fontSize: isMobile ? 30 : 40 }} />
+      </SocialButton>
       <Link
         to="https://www.linkedin.com/in/evanahouse/"
         target="_blank"

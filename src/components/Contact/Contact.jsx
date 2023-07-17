@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import SocialButtonRow from "../../common/SocialButtonRow";
 import LoadingModal from "../../common/LoadingModal";
 import { useEffect, useState } from "react";
+import Navbar from "../Navbar/Navbar";
 
 const Contact = () => {
   const { isMobile } = useIsMobile();
@@ -30,11 +31,11 @@ const Contact = () => {
   return (
     <ScreenWrapper>
       <LoadingModal loading={loading} />
+      <Navbar />
       <ContactContainer
         maxWidth="xl"
         sx={{
           flexDirection: isMobile ? "column-reverse" : "row",
-          pt: isMobile ? "clamp(1rem, 3vw, 2rem)" : "clamp(2rem, 3vw, 2rem)",
         }}
       >
         <Container
@@ -42,14 +43,12 @@ const Contact = () => {
             display: "flex",
             flexDirection: "column",
             width: "100%",
-            height: "100%",
             alignItems: "center",
             justifyContent: "center",
-            pt: isMobile ? "clamp(1rem, 3vw, 2rem)" : "clamp(2rem, 3vw, 2rem)",
           }}
         >
           <Typography
-            variant={isMobile ? "h4" : "h2"}
+            variant={isMobile ? "h4" : "h4"}
             sx={{
               color: PALETTE.primary,
               textAlign: "center",
@@ -61,10 +60,16 @@ const Contact = () => {
             GET IN TOUCH
           </Typography>
           <Typography
-            variant="h5"
+            variant={"body"}
             sx={{
               color: PALETTE.primary,
-              fontSize: "clamp(1rem, 3vw, 2rem)",
+              fontSize: {
+                xs: "1rem",
+                sm: "1.2rem",
+                md: "1.5rem",
+                lg: "1.5rem",
+                xl: "1.5rem",
+              },
               textAlign: "center",
               marginTop: "clamp(1rem, 3vw, 2rem)",
               pb: "clamp(1rem, 3vw, 2rem)",

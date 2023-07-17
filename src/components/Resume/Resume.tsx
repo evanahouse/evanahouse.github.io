@@ -4,6 +4,7 @@ import LoadingModal from "../../common/LoadingModal";
 import ScreenWrapper from "../../common/ScreenWrapper";
 import Spacer from "../../common/Spacer";
 import useIsMobile from "../../hooks/useIsMobile";
+import Navbar from "../Navbar/Navbar";
 import DownloadResumeButton from "./DownloadResumeButton";
 import EducationSection from "./EducationSection";
 import ExperienceSection from "./ExperienceSection";
@@ -27,6 +28,7 @@ const Resume = () => {
 
   return (
     <ScreenWrapper>
+      <Navbar />
       <LoadingModal loading={loading} />
       <Container
         sx={{

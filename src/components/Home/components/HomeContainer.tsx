@@ -6,10 +6,11 @@ const HomeContainer = styled(Container)(({ theme }) => ({
   paddingTop: theme.spacing(10),
   paddingBottom: theme.spacing(10),
   backgroundColor: PALETTE.bgTwo,
-  // height: "100vh",
   alignItems: "center",
   justifyContent: "center",
   display: "flex",
+  height: "100%",
+  flex: 1
 }));
 
 export default HomeContainer;

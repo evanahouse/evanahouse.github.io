@@ -33,8 +33,8 @@ const Footer = () => {
         <SocialButton
           onClick={() => {}}
           sx={{
-            width: isMobile ? 50 : 75,
-            height: isMobile ? 50 : 75,
+            width: isMobile ? 50 : 60,
+            height: isMobile ? 50 : 60,
           }}
         >
           <EmailIcon sx={{ fontSize: isMobile ? 30 : 40 }} />
@@ -42,7 +42,13 @@ const Footer = () => {
         <Typography
           variant="h5"
           sx={{
-            fontSize: "clamp(1rem, 3vw, 2rem)",
+            fontSize: {
+              xs: "1rem",
+              sm: "1.2rem",
+              md: "1.5rem",
+              lg: "1.5rem",
+              xl: "1.5rem",
+            },
             textAlign: "center",
           }}
         >
@@ -63,8 +69,8 @@ const Footer = () => {
         <SocialButton
           onClick={() => {}}
           sx={{
-            width: isMobile ? 50 : 75,
-            height: isMobile ? 50 : 75,
+            width: isMobile ? 50 : 60,
+            height: isMobile ? 50 : 60,
           }}
         >
           <HomeIcon sx={{ fontSize: isMobile ? 30 : 40 }} />
@@ -72,7 +78,13 @@ const Footer = () => {
         <Typography
           variant="h5"
           sx={{
-            fontSize: "clamp(1rem, 3vw, 2rem)",
+            fontSize: {
+              xs: "1rem",
+              sm: "1.2rem",
+              md: "1.5rem",
+              lg: "1.5rem",
+              xl: "1.5rem",
+            },
             textAlign: "center",
           }}
         >
@@ -80,7 +92,7 @@ const Footer = () => {
         </Typography>
       </Container>
       {/* SOCIAL BUTTONS */}
-     { !isMobile && <SocialButtonRow />}
+      {!isMobile && <SocialButtonRow />}
     </Container>
   );
 };

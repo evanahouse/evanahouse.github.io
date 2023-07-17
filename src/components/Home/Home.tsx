@@ -4,6 +4,7 @@ import Typed from "typed.js";
 import LoadingModal from "../../common/LoadingModal";
 import ScreenWrapper from "../../common/ScreenWrapper";
 import useIsMobile from "../../hooks/useIsMobile";
+import Navbar from "../Navbar/Navbar";
 import Footer from "./components/Footer";
 import HomeContainer from "./components/HomeContainer";
 import MainActionButton from "./components/MainActionButton";
@@ -43,8 +44,6 @@ const Home = () => {
       },
     };
     if (el.current) {
-  
-
       const typed = new Typed(el.current, typedOptions);
 
       return () => {
@@ -53,59 +52,87 @@ const Home = () => {
     }
   }, [loading]);
 
- 
-
   return (
-    <ScreenWrapper
-      sx={{
-        justifyContent: isMobile ? "center" : "center",
-      }}
-    >
+    <ScreenWrapper>
+      <Navbar />
       <LoadingModal loading={loading} />
-      <HomeContainer
+      <Container
         maxWidth="xl"
         sx={{
-          flexDirection: isMobile ? "column" : "row",
-          pt: isMobile ? 5 : 10,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100%",
+          flex:1,
+          
         }}
       >
-        <ProfilePhoto />
-        <Container
+        <HomeContainer
+          maxWidth="xl"
           sx={{
-            display: "flex",
-            flexDirection: "column",
-            ml: isMobile ? 0 : 5,
-            width: isMobile ? "100%" : "100%",
+            flexDirection: isMobile ? "column" : "row",
+            // pt: isMobile ? 5 : 10,
+            flex:1, 
+            height: isMobile ? "100%" : "100%",
           }}
         >
-          <Typography
-            ref={el}
-            variant={isMobile ? "h6" : "h3"}
-            align="left"
+          <ProfilePhoto />
+          <Container
             sx={{
-              pb: isMobile ? 2 : 5,
-              alignSelf: "center",
-              width: isMobile ? "75%" : "100%",
+              display: "flex",
+              flexDirection: "column",
+              ml: isMobile ? 0 : 5,
+              width: isMobile ? "100%" : "100%",
+              flex: 1
             }}
-          />
-          <>
-            <MainActionButton to={"/portfolio"} showButton={showButton}>
-              View Portfolio
-            </MainActionButton>
-            <Typography
-              variant={isMobile ? "h6" : "h2"}
-              align="center"
-              sx={{ opacity: showButton ? 1 : 0 }}
+          >
+            <Container
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                width: isMobile ? "100%" : "100%",
+                height: isMobile ? 150 : "auto",
+              }}
             >
-              or
-            </Typography>
-            <MainActionButton to={"/resume"} showButton={showButton}>
-              Download Resume
-            </MainActionButton>
-          </>
-        </Container>
-      </HomeContainer>
-      <Footer />
+              <Typography
+                ref={el}
+                variant={isMobile ? "h6" : "h3"}
+                align="left"
+                sx={{
+                  pb: isMobile ? 2 : 5,
+                  alignSelf: "center",
+                  width: isMobile ? "100%" : "100%",
+                }}
+              />
+            </Container>
+            <Container
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <MainActionButton to={"/portfolio"} showButton={showButton}>
+                View Portfolio
+              </MainActionButton>
+              <Typography
+                variant={isMobile ? "h6" : "h2"}
+                align="center"
+                sx={{ opacity: showButton ? 1 : 0 }}
+              >
+                or
+              </Typography>
+              <MainActionButton to={"/resume"} showButton={showButton}>
+                Download Resume
+              </MainActionButton>
+            </Container>
+          </Container>
+          {isMobile && <Footer />}
+        </HomeContainer>
+        {!isMobile && <Footer />}
+      </Container>
     </ScreenWrapper>
   );
 };

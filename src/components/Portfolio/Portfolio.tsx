@@ -15,6 +15,7 @@ import "swiper/swiper-bundle.css";
 import ScreenWrapper from "../../common/ScreenWrapper";
 import Spacer from "../../common/Spacer";
 import useIsMobile from "../../hooks/useIsMobile";
+import Navbar from "../Navbar/Navbar";
 import Footer from "./Footer";
 import InfoContent from "./InfoContent";
 import MediaContent from "./MediaContent";
@@ -64,9 +65,10 @@ const Portfolio = () => {
   return (
     <ScreenWrapper
       sx={{
-        flexDirection: "row",
+        // flexDirection: "row",
       }}
     >
+      <Navbar />
       {/* <LoadingModal loading={loading} /> */}
 
       <PortfolioContainer
@@ -83,13 +85,7 @@ const Portfolio = () => {
           selectedApp={selectedApp}
           handleAppChange={handleAppChange}
         />
-        {!isMobile && (
-          <>
-            <Spacer />
-            <Spacer />
-            <Spacer />
-          </>
-        )}
+       
         <Container
           sx={{
             display: "flex",

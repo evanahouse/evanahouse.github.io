@@ -53,6 +53,7 @@ const MainActionButton = ({ showButton, to, children, downloadAction, website }:
       sx={{
         opacity: showButton ? 1 : 0,
         typography: isMobile ? "h6" : "h3",
+        width : isMobile ? "100%" : "100%",
         mt: isMobile ? 0 : 0,
         mb: isMobile ? 0 : 0,
       }}

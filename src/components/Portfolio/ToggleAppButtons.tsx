@@ -44,14 +44,14 @@ const ToggleAppButtons = ({
         >
           OneBook
         </ToggleButton>
-        <ToggleButton
+        {/* <ToggleButton
           sx={{
             fontSize: isMobile ? ".75rem" : "1.5rem",
           }}
           value="othermind"
         >
           Other Mind
-        </ToggleButton>
+        </ToggleButton> */}
       </ToggleButtonGroup>
     </Container>
   );
