@@ -13,7 +13,7 @@ import theme from "./theme";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <BrowserRouter >
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<Home />} />
