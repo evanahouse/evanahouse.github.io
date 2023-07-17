@@ -64,8 +64,7 @@ const Home = () => {
           justifyContent: "center",
           alignItems: "center",
           height: "100%",
-          flex:1,
-          
+          flex: 1,
         }}
       >
         <HomeContainer
@@ -73,7 +72,6 @@ const Home = () => {
           sx={{
             flexDirection: isMobile ? "column" : "row",
             // pt: isMobile ? 5 : 10,
-            flex:1, 
             height: isMobile ? "100%" : "100%",
           }}
         >
@@ -84,7 +82,9 @@ const Home = () => {
               flexDirection: "column",
               ml: isMobile ? 0 : 5,
               width: isMobile ? "100%" : "100%",
-              flex: 1
+              flex: 1,
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
             <Container
@@ -129,8 +129,8 @@ const Home = () => {
               </MainActionButton>
             </Container>
           </Container>
-          {isMobile && <Footer />}
         </HomeContainer>
+        {isMobile && <Footer />}
         {!isMobile && <Footer />}
       </Container>
     </ScreenWrapper>

@@ -37,10 +37,10 @@ const Footer = () => {
         height: isMobile ? 100 : 100,
         backgroundColor: PALETTE.bgTwo,
         justifyContent: "center",
-        alignItems: "center",
+        alignItems: "flex-end",
         display: "flex",
-        // flex: 1,
         p: isMobile ? 2 : 2,
+        flex: .1,
       }}
     >
       <SocialButton

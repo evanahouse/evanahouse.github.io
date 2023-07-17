@@ -33,6 +33,8 @@ const ToggleAppButtons = ({
           sx={{
             fontSize: isMobile ? ".75rem" : "1.5rem",
           }}
+          //disabled if scatterbrainz is selected
+          disabled={selectedApp === "scatterbrainz"}
         >
           ScatterBrainz
         </ToggleButton>
@@ -40,6 +42,7 @@ const ToggleAppButtons = ({
           sx={{
             fontSize: isMobile ? ".75rem" : "1.5rem",
           }}
+          disabled={selectedApp === "onebook"}
           value="onebook"
         >
           OneBook

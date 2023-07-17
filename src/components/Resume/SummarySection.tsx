@@ -19,7 +19,7 @@ const SummarySection = () => {
         <Typography
           variant="subtitle1"
           sx={{
-            fontSize: isMobile? ".9rem": "1.25rem",
+            fontSize: isMobile ? ".9rem" : "1.25rem",
           }}
         >
           Dynamic engineer adept at both machine and personal communication.

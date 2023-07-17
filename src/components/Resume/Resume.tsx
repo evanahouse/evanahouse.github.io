@@ -34,11 +34,24 @@ const Resume = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
+          width: "100%",
         }}
       >
         <Spacer />
         <Spacer />
+        <Container
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignSelf: "center",
+            alignItems: "center",
+            width: "100%",
+            padding: 2
+          }}
+        >
         <DownloadResumeButton />
+        </Container>
         <Spacer />
         <Spacer />
         <SummarySection />
