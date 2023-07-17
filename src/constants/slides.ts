@@ -155,6 +155,132 @@ export const SLIDES = {
       src: IMAGES.ScatterBrainzNotifications,
     },
   ],
-  onebook: [],
+  onebook: [
+    {
+      screen: "Logo",
+      description: "",
+      src: IMAGES.OneBookLogo,
+    },
+    {
+      screen: "Register Landing",
+      description: "",
+      src: IMAGES.OneBookRegisterLanding,
+    },
+    {
+      screen: "Register",
+      description: "",
+      src: IMAGES.OneBookRegister,
+    },
+    {
+      screen: "Login",
+      description: "",
+      src: IMAGES.OneBookLogin,
+    },
+    {
+      screen: "Pro Availability",
+      description: "",
+      src: IMAGES.OneBookProAvailability,
+    },
+    {
+      screen: "Pro Dashboard",
+      description: "",
+      src: IMAGES.OneBookProDashboard,
+    },
+    {
+      screen: "Pro Edit Profile",
+      description: "",
+      src: IMAGES.OneBookProEditProfile,
+    },
+    {
+      screen: "Pro Invoice Summary",
+      description: "",
+      src: IMAGES.OneBookProInvoiceSummary,
+    },
+    {
+      screen: "Pro Job Board",
+      description: "",
+      src: IMAGES.OneBookProJobBoard,
+    },
+    {
+      screen: "Pro Job Detail Completed",
+      description: "",
+      src: IMAGES.OneBookProJobDetailCompleted,
+    },
+    {
+      screen: "Pro Job Detail Requested",
+      description: "",
+      src: IMAGES.OneBookProJobDetailRequested,
+    },
+    {
+      screen: "Pro Profile",
+      description: "",
+      src: IMAGES.OneBookProProfile,
+    },
+    {
+      screen: "Pro Services",
+      description: "",
+      src: IMAGES.OneBookProServices,
+    },
+    {
+      screen: "User Availability Calendar",
+      description: "",
+      src: IMAGES.OneBookUserAvailabilityCalendar,
+    },
+    {
+      screen: "User Confirm And Pay",
+      description: "",
+      src: IMAGES.OneBookUserConfirmAndPay,
+    },
+    {
+      screen: "User Dashboard",
+      description: "",
+      src: IMAGES.OneBookUserDashboard,
+    },
+    {
+      screen: "User Dashboard Search Results",
+      description: "",
+      src: IMAGES.OneBookUserDashboardSearchResults,
+    },
+    {
+      screen: "User Invoice Summary",
+      description: "",
+      src: IMAGES.OneBookUserInvoiceSummary,
+    },
+    {
+      screen: "User Job Board",
+      description: "",
+      src: IMAGES.OneBookUserJobBoard,
+    },
+    {
+      screen: "User Job Details Completed",
+      description: "",
+      src: IMAGES.OneBookUserJobDetailsCompleted,
+    },
+    {
+      screen: "User Job Details Pending",
+      description: "",
+      src: IMAGES.OneBookUserJobDetailsPending,
+    },
+    {
+      screen: "User Pro Details",
+      description: "",
+      src: IMAGES.OneBookUserProDetails,
+    },
+    {
+      screen: "User Pro Reviews",
+      description: "",
+      src: IMAGES.OneBookUserProReviews,
+    },
+    {
+      screen: "User Profile",
+      description: "",
+      src: IMAGES.OneBookUserProfile,
+    },
+    {
+      screen: "User ServicesAnd Fees",
+      description: "",
+      src: IMAGES.OneBookUserServiceAndFees,
+    }
+  ],
   othermind: [],
 };
