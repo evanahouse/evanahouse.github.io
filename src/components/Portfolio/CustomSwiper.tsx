@@ -54,6 +54,7 @@ const CustomSwiper = ({
       ref={swiperRef}
       onSlideChange={onSlideChange} // Pass the onSlideChange prop to handle slide change event
       effect="cube"
+  
       grabCursor={true}
       spaceBetween={0}
       slidesPerView={1}

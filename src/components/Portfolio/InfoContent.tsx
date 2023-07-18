@@ -29,10 +29,10 @@ const InfoContent = ({ selectedApp, activeSlideIndex }: InfoContentProps) => {
         {!isMobile && (
           <>
             <Typography variant={isMobile ? "h6" : "h4"} gutterBottom>
-              App: ScatterBrainz
+              {selectedApp === "scatterbrainz" ? "ScatterBrainz" : "OneBook"}
             </Typography>
             <Typography variant={isMobile ? "h6" : "h4"} gutterBottom>
-              {"Screen: " + `"` + selectedSlide?.screen + `"`}
+              {`"` + selectedSlide?.screen + `"`}
             </Typography>
           </>
         )}
@@ -43,7 +43,7 @@ const InfoContent = ({ selectedApp, activeSlideIndex }: InfoContentProps) => {
           }}
           gutterBottom
         >
-          {"Description: " + selectedSlide?.description}
+          {selectedSlide?.description}
         </Typography>
       </Paper>
       <Footer selectedApp={selectedApp} />

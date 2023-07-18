@@ -179,61 +179,6 @@ export const SLIDES = {
       src: IMAGES.OneBookLogin,
     },
     {
-      screen: "Pro Availability",
-      description: "",
-      src: IMAGES.OneBookProAvailability,
-    },
-    {
-      screen: "Pro Dashboard",
-      description: "",
-      src: IMAGES.OneBookProDashboard,
-    },
-    {
-      screen: "Pro Edit Profile",
-      description: "",
-      src: IMAGES.OneBookProEditProfile,
-    },
-    {
-      screen: "Pro Invoice Summary",
-      description: "",
-      src: IMAGES.OneBookProInvoiceSummary,
-    },
-    {
-      screen: "Pro Job Board",
-      description: "",
-      src: IMAGES.OneBookProJobBoard,
-    },
-    {
-      screen: "Pro Job Detail Completed",
-      description: "",
-      src: IMAGES.OneBookProJobDetailCompleted,
-    },
-    {
-      screen: "Pro Job Detail Requested",
-      description: "",
-      src: IMAGES.OneBookProJobDetailRequested,
-    },
-    {
-      screen: "Pro Profile",
-      description: "",
-      src: IMAGES.OneBookProProfile,
-    },
-    {
-      screen: "Pro Services",
-      description: "",
-      src: IMAGES.OneBookProServices,
-    },
-    {
-      screen: "User Availability Calendar",
-      description: "",
-      src: IMAGES.OneBookUserAvailabilityCalendar,
-    },
-    {
-      screen: "User Confirm And Pay",
-      description: "",
-      src: IMAGES.OneBookUserConfirmAndPay,
-    },
-    {
       screen: "User Dashboard",
       description: "",
       src: IMAGES.OneBookUserDashboard,
@@ -244,9 +189,14 @@ export const SLIDES = {
       src: IMAGES.OneBookUserDashboardSearchResults,
     },
     {
-      screen: "User Invoice Summary",
+      screen: "User Pro Details",
       description: "",
-      src: IMAGES.OneBookUserInvoiceSummary,
+      src: IMAGES.OneBookUserProDetails,
+    },
+    {
+      screen: "User Availability Calendar",
+      description: "",
+      src: IMAGES.OneBookUserAvailabilityCalendar,
     },
     {
       screen: "User Job Board",
@@ -254,19 +204,24 @@ export const SLIDES = {
       src: IMAGES.OneBookUserJobBoard,
     },
     {
-      screen: "User Job Details Completed",
-      description: "",
-      src: IMAGES.OneBookUserJobDetailsCompleted,
-    },
-    {
       screen: "User Job Details Pending",
       description: "",
       src: IMAGES.OneBookUserJobDetailsPending,
     },
     {
-      screen: "User Pro Details",
+      screen: "User Confirm And Pay",
       description: "",
-      src: IMAGES.OneBookUserProDetails,
+      src: IMAGES.OneBookUserConfirmAndPay,
+    },
+    {
+      screen: "User Invoice Summary",
+      description: "",
+      src: IMAGES.OneBookUserInvoiceSummary,
+    },
+    {
+      screen: "User Job Details Completed",
+      description: "",
+      src: IMAGES.OneBookUserJobDetailsCompleted,
     },
     {
       screen: "User Pro Reviews",
@@ -279,9 +234,54 @@ export const SLIDES = {
       src: IMAGES.OneBookUserProfile,
     },
     {
-      screen: "User ServicesAnd Fees",
+      screen: "User Services And Fees",
       description: "",
       src: IMAGES.OneBookUserServiceAndFees,
+    },
+    {
+      screen: "Pro Dashboard",
+      description: "",
+      src: IMAGES.OneBookProDashboard,
+    },
+    {
+      screen: "Pro Job Board",
+      description: "",
+      src: IMAGES.OneBookProJobBoard,
+    },
+    {
+      screen: "Pro Job Detail Requested",
+      description: "",
+      src: IMAGES.OneBookProJobDetailRequested,
+    },
+    {
+      screen: "Pro Job Detail Completed",
+      description: "",
+      src: IMAGES.OneBookProJobDetailCompleted,
+    },
+    {
+      screen: "Pro Invoice Summary",
+      description: "",
+      src: IMAGES.OneBookProInvoiceSummary,
+    },
+    {
+      screen: "Pro Profile",
+      description: "",
+      src: IMAGES.OneBookProProfile,
+    },
+    {
+      screen: "Pro Edit Profile",
+      description: "",
+      src: IMAGES.OneBookProEditProfile,
+    },
+    {
+      screen: "Pro Availability",
+      description: "",
+      src: IMAGES.OneBookProAvailability,
+    },
+    {
+      screen: "Pro Services",
+      description: "",
+      src: IMAGES.OneBookProServices,
     },
   ],
   othermind: [],
