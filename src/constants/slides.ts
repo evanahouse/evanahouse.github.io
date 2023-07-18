@@ -280,11 +280,6 @@ export const SLIDES = {
       src: IMAGES.OneBookProProfile,
     },
     {
-      screen: "Pro Edit Profile",
-      description: "Edit service professional profile page. ",
-      src: IMAGES.OneBookProEditProfile,
-    },
-    {
       screen: "Pro Availability",
       description: "Edit service professional availability. Option to add a lunch break.",
       src: IMAGES.OneBookProAvailability,
