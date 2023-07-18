@@ -151,14 +151,16 @@ export const SLIDES = {
     },
     {
       screen: "Notifications",
-      description: "View all push notifications sent to user in reverse chronological order.",
+      description:
+        "View all push notifications sent to user in reverse chronological order.",
       src: IMAGES.ScatterBrainzNotifications,
     },
   ],
   onebook: [
     {
       screen: "Logo",
-      description: "",
+      description:
+        "OneBook is an online marketplace for local mobile (travel to you) service professionals. Users can search by service category, compare verified professionals, and send book requests. Booking costs are set by the professionals themselves including their profile, categories, costs, credentials and availability.",
       src: IMAGES.OneBookLogo,
     },
     {
@@ -280,7 +282,7 @@ export const SLIDES = {
       screen: "User ServicesAnd Fees",
       description: "",
       src: IMAGES.OneBookUserServiceAndFees,
-    }
+    },
   ],
   othermind: [],
 };

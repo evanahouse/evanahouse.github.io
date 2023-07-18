@@ -24,7 +24,7 @@ const Footer = ({ selectedApp }: FooterProps) => {
         justifyContent: "center",
         alignItems: "center",
         alignSelf: "left",
-        paddingTop: 2,
+        paddingTop: 3,
       }}
     >
       <Typography

@@ -10,7 +10,7 @@ interface MediaContentProps {
   onSlideChange?: (swiper:any) => void;
 }
 
-const MediaContent = ({selectedApp, onSlideChange}: MediaContentProps) => {
+const MediaContent = ({selectedApp, onSlideChange,}: MediaContentProps) => {
   const { isMobile } = useIsMobile();
 
   return (
@@ -25,6 +25,7 @@ const MediaContent = ({selectedApp, onSlideChange}: MediaContentProps) => {
         flexDirection: "column" ,
         flex:1,
         alignSelf: "center",
+        zIndex: 10
       }}
     >
       <CustomSwiper onSlideChange={onSlideChange}>

@@ -10,13 +10,13 @@ import SwiperCore, {
 
 import { Container } from "@mui/material";
 // import "swiper/css/effect-cards";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "swiper/swiper-bundle.css";
+import LoadingModal from "../../common/LoadingModal";
 import ScreenWrapper from "../../common/ScreenWrapper";
 import Spacer from "../../common/Spacer";
 import useIsMobile from "../../hooks/useIsMobile";
 import Navbar from "../Navbar/Navbar";
-import Footer from "./Footer";
 import InfoContent from "./InfoContent";
 import MediaContent from "./MediaContent";
 import PortfolioContainer from "./PortfolioContainer";
@@ -37,25 +37,25 @@ const Portfolio = () => {
     "scatterbrainz" | "othermind" | "onebook"
   >("scatterbrainz");
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+  const [loading, setLoading] = useState(true);
 
-  // const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   setLoading(true);
 
-  //   const timer = setTimeout(() => {
-  //     setLoading(false);
-  //   }, 3000);
+  useEffect(() => {
+    setLoading(true);
 
-  //   return () => clearTimeout(timer);
-  // }, []);
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleAppChange = (
     event: any,
     newApp: "scatterbrainz" | "onebook" | "othermind"
   ) => {
     setSelectedApp(newApp);
-    setActiveSlideIndex(0);
   };
 
   const handleSlideChange = (swiper: any) => {
@@ -66,7 +66,7 @@ const Portfolio = () => {
   return (
     <ScreenWrapper sx={{}}>
       <Navbar />
-      {/* <LoadingModal loading={loading} /> */}
+      <LoadingModal loading={loading} />
 
       <PortfolioContainer
         maxWidth="xl"
@@ -91,7 +91,7 @@ const Portfolio = () => {
             justifyContent: isMobile ? "flex-start" : "flex-start",
             width: "100%",
             flex: 1,
-            pt:1
+            pt: 1,
           }}
         >
           <MediaContent
@@ -106,6 +106,7 @@ const Portfolio = () => {
               justifyContent: "flex-start",
               flexDirection: "column",
               flex: 1,
+              zIndex: 100
             }}
           >
             <InfoContent

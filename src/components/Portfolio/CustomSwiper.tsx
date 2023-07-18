@@ -33,9 +33,8 @@ const CustomSwiper = ({ children, onSlideChange }: CustomSwiperProps) => {
   return (
     <Swiper
       onSlideChange={onSlideChange} // Pass the onSlideChange prop to handle slide change event
-      effect="coverflow"
+      effect="cube"
       grabCursor={true}
-      // centeredSlides={true}
       spaceBetween={0}
       slidesPerView={1}
       // loop={true}
@@ -47,6 +46,15 @@ const CustomSwiper = ({ children, onSlideChange }: CustomSwiperProps) => {
         modifier: 1,
         slideShadows: false,
       }}
+      cubeEffect={
+        {
+          shadow: true,
+          slideShadows: false,
+          shadowOffset: isMobile ? 40 : 75,
+          shadowScale: 0.54,
+
+        }
+      }
       navigation={true}
       keyboard={{ enabled: true }}
       style={{
@@ -57,6 +65,7 @@ const CustomSwiper = ({ children, onSlideChange }: CustomSwiperProps) => {
         justifyContent: "center",
         flex: 1,
         display: "flex",
+        zIndex: 1,
       }}
     >
       {children}
