@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d285d2a9.css",
-    "main.js": "/static/js/main.ed6690bc.js",
+    "main.js": "/static/js/main.ba3919e0.js",
     "static/js/787.d74c9d04.chunk.js": "/static/js/787.d74c9d04.chunk.js",
     "static/media/dinnerCategoryRecipes.png": "/static/media/dinnerCategoryRecipes.87db49507a09a1ba07bf.png",
     "static/media/whatsForDinner.png": "/static/media/whatsForDinner.4c03d285f53eb8eebb63.png",
@@ -69,11 +69,11 @@
     "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
     "index.html": "/index.html",
     "main.d285d2a9.css.map": "/static/css/main.d285d2a9.css.map",
-    "main.ed6690bc.js.map": "/static/js/main.ed6690bc.js.map",
+    "main.ba3919e0.js.map": "/static/js/main.ba3919e0.js.map",
     "787.d74c9d04.chunk.js.map": "/static/js/787.d74c9d04.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d285d2a9.css",
-    "static/js/main.ed6690bc.js"
+    "static/js/main.ba3919e0.js"
   ]
 }
