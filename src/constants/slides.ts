@@ -165,122 +165,138 @@ export const SLIDES = {
     },
     {
       screen: "Register Landing",
-      description: "",
+      description:
+        "Whether you're a service professional or a user interested in booking a service, you can register here.",
       src: IMAGES.OneBookRegisterLanding,
     },
     {
       screen: "Register",
-      description: "",
+      description:
+        "Pro registration form using Formik, Yup (validation), and Firebase Authentication.",
       src: IMAGES.OneBookRegister,
     },
     {
       screen: "Login",
-      description: "",
+      description:
+        "User/Pro login form using Formik, Yup (validation), and Firebase Authentication.",
       src: IMAGES.OneBookLogin,
     },
     {
       screen: "User Dashboard",
-      description: "",
+      description:
+        "Users can browse service professionals from 15+ service categories, and view their search results. User can bookmark their favorite pros, and send booking requests.",
       src: IMAGES.OneBookUserDashboard,
     },
     {
       screen: "User Dashboard Search Results",
-      description: "",
+      description:
+        "View service professionals in your area (25 mile radius) based on your search criteria.",
       src: IMAGES.OneBookUserDashboardSearchResults,
     },
     {
       screen: "User Pro Details",
-      description: "",
+      description:
+        "View service professional details including their profile, categories, costs, credentials and availability. Users can share pro details with friends and family.",
       src: IMAGES.OneBookUserProDetails,
     },
     {
       screen: "User Availability Calendar",
-      description: "",
+      description:
+        "Users can view service professional availability and send booking requests. Custom calendar created with react-native-calendars.",
       src: IMAGES.OneBookUserAvailabilityCalendar,
     },
     {
+      screen: "User Confirm And Pay",
+      description:
+        "Confirm booking details, add description and pay using Stripe (multi-party payments). ",
+      src: IMAGES.OneBookUserConfirmAndPay,
+    },
+    {
       screen: "User Job Board",
-      description: "",
+      description:
+        "Users can view pending, booked, completed, and cancelled jobs by date.",
       src: IMAGES.OneBookUserJobBoard,
     },
     {
       screen: "User Job Details Pending",
-      description: "",
+      description:
+        "View job details including date, location, and pro details. Users can cancel pending jobs.",
       src: IMAGES.OneBookUserJobDetailsPending,
     },
     {
-      screen: "User Confirm And Pay",
-      description: "",
-      src: IMAGES.OneBookUserConfirmAndPay,
-    },
-    {
       screen: "User Invoice Summary",
-      description: "",
+      description: "View invoice line items from user payment",
       src: IMAGES.OneBookUserInvoiceSummary,
     },
     {
       screen: "User Job Details Completed",
-      description: "",
+      description:
+        "Leave a review for your service professional after job completion.",
       src: IMAGES.OneBookUserJobDetailsCompleted,
     },
     {
       screen: "User Pro Reviews",
-      description: "",
+      description: "View service professional reviews",
       src: IMAGES.OneBookUserProReviews,
     },
     {
       screen: "User Profile",
-      description: "",
+      description:
+        "View user profile and update profile photo (take a photo or select from library) using react-native-image-picker. Update user email/password using Firebase Authentication. Delete account using custom cloud function.",
       src: IMAGES.OneBookUserProfile,
     },
     {
-      screen: "User Services And Fees",
-      description: "",
-      src: IMAGES.OneBookUserServiceAndFees,
-    },
-    {
       screen: "Pro Dashboard",
-      description: "",
+      description:
+        "Service pros can view job board, share their profile, and edit their profile, availability, and services.",
       src: IMAGES.OneBookProDashboard,
     },
     {
       screen: "Pro Job Board",
-      description: "",
+      description:
+        "Service pros can view pending, booked, completed, and cancelled jobs in list form or by date.",
       src: IMAGES.OneBookProJobBoard,
     },
     {
       screen: "Pro Job Detail Requested",
-      description: "",
+      description:
+        "Service pros can accept or decline booking requests from users.",
       src: IMAGES.OneBookProJobDetailRequested,
     },
     {
       screen: "Pro Job Detail Completed",
-      description: "",
+      description:
+        "Once a service pro accepts a booking request, the job status changes to booked. The service pro can now get directions, contact the client, or view invoice summary.",
       src: IMAGES.OneBookProJobDetailCompleted,
     },
     {
       screen: "Pro Invoice Summary",
-      description: "",
+      description: "Invoice summary for completed jobs.",
       src: IMAGES.OneBookProInvoiceSummary,
     },
     {
       screen: "Pro Profile",
-      description: "",
+      description: "Service professional profile page. ",
       src: IMAGES.OneBookProProfile,
     },
     {
       screen: "Pro Edit Profile",
-      description: "",
+      description: "Edit service professional profile page. ",
       src: IMAGES.OneBookProEditProfile,
     },
     {
       screen: "Pro Availability",
-      description: "",
+      description: "Edit service professional availability. Option to add a lunch break.",
       src: IMAGES.OneBookProAvailability,
     },
     {
-      screen: "Pro Services",
-      description: "",
+      screen: "Pro Services And Fees",
+      description: "View pro services and fees.",
+      src: IMAGES.OneBookUserServiceAndFees,
+    },
+    {
+      screen: "Pro Edit Services and Fees",
+      description: "Edit pro services and fees.",
       src: IMAGES.OneBookProServices,
     },
   ],

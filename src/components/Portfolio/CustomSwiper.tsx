@@ -70,7 +70,7 @@ const CustomSwiper = ({
       cubeEffect={{
         shadow: true,
         slideShadows: false,
-        shadowOffset: isMobile ? 40 : 75,
+        shadowOffset: isMobile ? 30 : 75,
         shadowScale: 0.54,
       }}
       navigation={true}
