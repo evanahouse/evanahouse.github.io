@@ -9,6 +9,7 @@ import SwiperCore, {
 } from "swiper";
 
 // import "swiper/css/effect-cards";
+import { useEffect, useRef } from "react";
 import { Swiper } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import useIsMobile from "../../hooks/useIsMobile";
@@ -16,9 +17,14 @@ import useIsMobile from "../../hooks/useIsMobile";
 interface CustomSwiperProps {
   children: React.ReactNode;
   onSlideChange?: (swiper: any) => void;
+  selectedApp?: "scatterbrainz" | "onebook" | "othermind";
 }
 
-const CustomSwiper = ({ children, onSlideChange }: CustomSwiperProps) => {
+const CustomSwiper = ({
+  children,
+  onSlideChange,
+  selectedApp,
+}: CustomSwiperProps) => {
   SwiperCore.use([
     Navigation,
     Pagination,
@@ -30,8 +36,22 @@ const CustomSwiper = ({ children, onSlideChange }: CustomSwiperProps) => {
   ]);
   const { isMobile } = useIsMobile();
 
+  const swiperRef = useRef<any>(null);
+
+  useEffect(() => {
+    if (selectedApp && swiperRef.current) {
+      const swiper = swiperRef.current.swiper;
+      const activeIndex = swiper.activeIndex;
+
+      if (activeIndex !== 0) {
+        swiper.slideTo(0,0, false);
+      }
+    }
+  }, [selectedApp]);
+
   return (
     <Swiper
+      ref={swiperRef}
       onSlideChange={onSlideChange} // Pass the onSlideChange prop to handle slide change event
       effect="cube"
       grabCursor={true}
@@ -46,15 +66,12 @@ const CustomSwiper = ({ children, onSlideChange }: CustomSwiperProps) => {
         modifier: 1,
         slideShadows: false,
       }}
-      cubeEffect={
-        {
-          shadow: true,
-          slideShadows: false,
-          shadowOffset: isMobile ? 40 : 75,
-          shadowScale: 0.54,
-
-        }
-      }
+      cubeEffect={{
+        shadow: true,
+        slideShadows: false,
+        shadowOffset: isMobile ? 40 : 75,
+        shadowScale: 0.54,
+      }}
       navigation={true}
       keyboard={{ enabled: true }}
       style={{

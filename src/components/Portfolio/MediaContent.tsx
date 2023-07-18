@@ -28,7 +28,7 @@ const MediaContent = ({selectedApp, onSlideChange,}: MediaContentProps) => {
         zIndex: 10
       }}
     >
-      <CustomSwiper onSlideChange={onSlideChange}>
+      <CustomSwiper selectedApp={selectedApp} onSlideChange={onSlideChange}>
         {SLIDES[selectedApp]?.map((slide, index) => (
           <SwiperSlide key={index}>
               <SwiperCard src={slide.src}  />
