@@ -40,7 +40,7 @@ const Footer = () => {
         alignItems: "flex-end",
         display: "flex",
         p: isMobile ? 2 : 2,
-        flex: .1,
+        flex: 0.1,
       }}
     >
       <SocialButton
@@ -69,14 +69,21 @@ const Footer = () => {
           <LinkedInIcon sx={{ fontSize: isMobile ? 30 : 40 }} />
         </SocialButton>
       </Link>
-      <SocialButton
-        sx={{
-          width: isMobile ? 50 : 100,
-          height: isMobile ? 50 : 100,
-        }}
+      <Link
+        to="https://www.instagram.com/evanahouse/"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ textDecoration: "none" }}
       >
-        <InstagramIcon sx={{ fontSize: isMobile ? 30 : 40 }} />
-      </SocialButton>
+        <SocialButton
+          sx={{
+            width: isMobile ? 50 : 100,
+            height: isMobile ? 50 : 100,
+          }}
+        >
+          <InstagramIcon sx={{ fontSize: isMobile ? 30 : 40 }} />
+        </SocialButton>
+      </Link>
     </RowContainer>
   );
 };
