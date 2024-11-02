@@ -22,7 +22,7 @@ const SkillsSection = () => {
             fontSize: isMobile ? "0.9rem" : "1.25rem",
           }}
         >
-          React Native, React.js, Expo, TypeScript, JavaScript, Firebase, Google
+          React Native, React.js, Expo, TypeScript, JavaScript, Auth0, Supabase, Firebase, Google
           Cloud Platform, Hasura, Redux, Zustand, Node.js, React Query, GraphQL,
           Xcode, Android Studio, RESTful APIs, Git, Ruby on Rails, C, C++, R, G,
           Figma, Adobe Creative Suite, Jira, Trello, Stripe

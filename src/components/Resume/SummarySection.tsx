@@ -22,18 +22,18 @@ const SummarySection = () => {
             fontSize: isMobile ? ".9rem" : "1.25rem",
           }}
         >
-          Dynamic engineer adept at both machine and personal communication.
-          Seasoned full-stack developer with a specialty in React Native,
-          leveraging Expo to create remarkable, cross-platform mobile
-          applications from scratch. With a solid background in Mechanical
-          Engineering from Virginia Tech, I bring a unique blend of technical
-          expertise and creative problem-solving skills. Meticulous in ensuring
-          pixel-perfect frontends and seamlessly integrating them with scalable
-          Firebase backends, I consistently deliver exceptional user
-          experiences. Passionate about innovation and driven by a keen eye for
-          design aesthetics, I am actively seeking opportunities in React Native
-          development to contribute my expertise and propel organizations to new
-          heights.
+          Dynamic engineer skilled in both machine and human communication.
+          Experienced full-stack developer specializing in React Native, with a
+          proven track record of building cross-platform mobile applications
+          using Expo from the ground up. Leveraging a Mechanical Engineering
+          degree from Virginia Tech, I combine technical expertise with creative
+          problem-solving. Known for crafting pixel-perfect frontends and
+          integrating them with scalable backends, I collaborate seamlessly with
+          backend teams to ensure cohesive system architecture and robust
+          performance. Passionate about innovation and driven by a keen eye for
+          design aesthetics, I am eager to contribute my expertise to React
+          Native development projects and help organizations achieve new levels
+          of success.
         </Typography>
       </Paper>
     </Container>

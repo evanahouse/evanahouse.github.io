@@ -14,12 +14,25 @@ const ExperienceSection = () => {
       }}
     >
       <Paper elevation={3} sx={{ padding: 2 }}>
-        <Typography variant={isMobile ?  "h6" : "h4"} gutterBottom>
+        <Typography variant={isMobile ? "h6" : "h4"} gutterBottom>
           Experience
         </Typography>
         <ExperienceItem
+          title="Senior Software Engineer (Tech Lead), Syneos Health, Morrisville, NC"
+          timeline="September 2023 - Present"
+          googleLink="https://play.google.com/store/apps/developer?id=StudyKIK+LLC&hl=en_SG"
+          iosLink="https://apps.apple.com/us/developer/caerus-marketing-llc/id1301549334"
+          description={[
+            "•Lead and oversee the development of high-quality, scalable clinical trial apps.",
+            "•Translate product visions into actionable development plans that drive project success.",
+            "•Drive the end-to-end development process, ensuring high-quality code and timely delivery.",
+            "•Maintain high standards for code quality through regular code reviews and mentorship.",
+          ]}
+        />
+        <Box sx={{ marginBottom: "2rem" }} /> {/* Spacer */}
+        <ExperienceItem
           title="React Native Engineer, ScatterBrainz, New York, NY"
-          timeline="January 2023 - Present"
+          timeline="January 2023 - September 2023"
           googleLink="https://play.google.com/store/apps/details?id=com.scatterbrainz.dev&hl=en_US&gl=US"
           iosLink="https://apps.apple.com/us/app/scatterbrainz/id1671936756"
           description={[
@@ -33,7 +46,7 @@ const ExperienceSection = () => {
         <Box sx={{ marginBottom: "2rem" }} /> {/* Spacer */}
         <ExperienceItem
           title="React Native Engineer, OneBook, St. Petersburg, FL"
-          timeline="April 2022 - Present"
+          timeline="May 2022 - September 2023"
           googleLink="https://play.google.com/store/apps/details?id=com.onebook.dev&hl=en_US&gl=US"
           iosLink="https://apps.apple.com/us/app/onebook/id6443838662"
           description={[
@@ -46,7 +59,7 @@ const ExperienceSection = () => {
         <Box sx={{ marginBottom: "2rem" }} /> {/* Spacer */}
         <ExperienceItem
           title="Junior React Native Engineer, Other Mind Inc., Malibu, CA"
-          timeline="September 2021 - April 2022"
+          timeline="September 2021 - May 2022"
           googleLink="https://play.google.com/store/apps/details?id=com.othermind.om"
           iosLink="https://apps.apple.com/gb/app/other-mind/id1598691101"
           description={[
